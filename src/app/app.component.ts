@@ -8,5 +8,10 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'ubabbio';
+  telefono = '+393665023348';
+
+  chiamaNumero() {
+    window.location.href = `tel:${this.telefono}`;
+    console.log(`Tentativo di chiamata a ${this.telefono}`);
+  }
 }
