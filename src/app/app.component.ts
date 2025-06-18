@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,10 +8,23 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  telefono = '+393665023348';
+  isScrolled = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    this.isScrolled = scrollTop > 50;
+  }
+
+
+
+  telefono = '+393889007200';
 
   chiamaNumero() {
     window.location.href = `tel:${this.telefono}`;
     console.log(`Tentativo di chiamata a ${this.telefono}`);
   }
 }
+
+  
+

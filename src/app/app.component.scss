@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    letter-spacing: 0.3px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 3000vh;
+}
+
+.bigDaddy {
+    min-height: 100%;
+    width: 100%;
+    height: 3000vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    align-items: center;
+    padding: 5%;
+    width: 100%;
+    height: 15%;
+    z-index: 10000;
+    background-color: transparent;
+    border-bottom: 0.5px solid white;
+    transition: all 0.4s ease
+}
+
+.header.scrolled {
+    background-color: white;
+}
+
+.content-menu {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+
+.button-nav {
+    background-color: white;
+    color: black;
+    font-weight: 570;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 15px 25px;
+    border: 1px solid white;
+    transition: all 0.4s ease, opacity 0.3s linear;
+}
+
+.button-nav:hover {
+    opacity: 0.8;
+}
+
+.button-nav.scrolled {
+    background-color: #5C402F;
+    color: white;
+    border: 1px solid #5C402F;
+}
+
+.title-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.title-description > h1, h3, p {
+    margin-bottom: 1rem;
+}
+
+.title-description p {
+    font-size: large;
+}
+
+#pastamain {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    filter: brightness(60%);
+    object-fit: cover;
+    object-position: center;
+    z-index: -1000;
+}
+
+
+

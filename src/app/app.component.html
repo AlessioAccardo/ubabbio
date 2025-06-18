@@ -1,11 +1,18 @@
 <div class="bigDaddy">
-  <div class="header">
-    <span><img src="" alt="QUA CI VA IL LOGO"></span>
-    <button (click)="chiamaNumero()">Prenota ora</button>
+  <div #ciao class="header" [class.scrolled]="isScrolled">
+    <span class="logo"><img src="" alt="QUA CI VA IL LOGO"></span>
+    <button (click)="chiamaNumero()" class="button-nav" [class.scrolled]="isScrolled">Prenota ora</button>
   </div>
 
   <div class="content-menu">
-    <p>This is a simple Angular application demonstrating basic structure and styling.</p>
+    <img id="pastamain" src="assets/pasta.webp" alt="pasta">
+    <div class="title-description">
+      <h3>UBABBIO</h3>
+      <h1>Osteria Made In Sicily a Palermo</h1>
+      <p>Lasciati accogliere dall’atmosfera vibrante e calorosa di uBabbio, dove ogni pasto è un momento di condivisione e gioia.
+      </p>
+      <button class="button-nav">Scopri il Menù</button>
+    </div>
   </div>
 
   <div class="content-story">
